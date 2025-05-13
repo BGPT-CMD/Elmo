@@ -4,11 +4,34 @@
   <meta charset="UTF-8">
   <title>Starlit Portal</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script>
+  const music = document.getElementById("bg-music");
+  const button = document.getElementById("music-toggle");
+
+  button.addEventListener("click", () => {
+    if (music.muted) {
+      music.muted = false;
+      button.textContent = "🔇 Mute";
+    } else {
+      music.muted = true;
+      button.textContent = "🔈 Unmute";
+    }
+  });
+</script>
+
 <body>
   <div class="sky">
     <div class="aurora"></div>
     <button class="star" onclick="window.location.href='address.html'"></button>
   </div>
+  <audio id="bg-music" loop autoplay muted>
+  <source src="assets/ambient.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<button id="music-toggle">🔈 Unmute</button>
+
 </body>
 </html>
