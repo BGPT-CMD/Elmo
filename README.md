@@ -21,36 +21,6 @@
 </body>
 </html>
 
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-    background-color: #f0f0f0;
-}
-
-.container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    display: inline-block;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-#address {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
-}
 
 
 
