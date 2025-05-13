@@ -1,0 +1,74 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.aurora {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,255,255,0.1) 0%, rgba(0,255,127,0.2) 50%, rgba(0,0,0,0) 100%);
+  animation: auroraMove 8s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes auroraMove {
+  0% { transform: translateY(0) scaleX(1); opacity: 0.3; }
+  50% { transform: translateY(-20px) scaleX(1.2); opacity: 0.6; }
+  100% { transform: translateY(0) scaleX(1); opacity: 0.3; }
+}
+
+.star {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, white 0%, #9bdfff 40%, transparent 60%);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px #9bdfff, 0 0 20px #00ffe5;
+  animation: twinkle 2s infinite ease-in-out;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.address-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at top, #0b1a24, #000);
+  color: #b5e3ff;
+  text-align: center;
+}
+
+.address-page h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.address-page a {
+  margin-top: 2em;
+  color: #88e6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
